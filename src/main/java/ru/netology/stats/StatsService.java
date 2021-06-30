@@ -21,7 +21,7 @@ public class StatsService {
     }
 
 
-    public int FindNumberLastMonthWithTheHighestSales(int[] sales) {        // Номер месяца, в котором был пик продаж
+    public int findNumberLastMonthWithTheHighestSales(int[] sales) {        // Номер месяца, в котором был пик продаж
         int maxSale = sales[0];     // Значение наивысших продаж
         int i = 0;
         int iMax = 0;               // Номер месяца, в котором был пик продаж
@@ -32,10 +32,8 @@ public class StatsService {
         }
 
         for (int sale : sales) {
-            if (sale != maxSale) {
-                i = i + 1;
-            } else {
-                i = i + 1;
+            i = i + 1;
+            if (sale == maxSale) {
                 iMax = i;
             }
         }
@@ -43,7 +41,7 @@ public class StatsService {
     }
 
 
-    public int FindNumberLastMonthWithTheLowestSales(int[] sales) {        // Номер месяца, в котором был минимум продаж
+    public int findNumberLastMonthWithTheLowestSales(int[] sales) {        // Номер месяца, в котором был минимум продаж
         int minSale = sales[0];     // Значение наименьших продаж
         int i = 0;
         int iMin = 0;               // Номер месяца, в котором был минимум продаж
@@ -54,10 +52,8 @@ public class StatsService {
         }
 
         for (int sale : sales) {
-            if (sale != minSale) {
-                i = i + 1;
-            } else {
-                i = i + 1;
+            i = i + 1;
+            if (sale == minSale) {
                 iMin = i;
             }
         }
@@ -65,7 +61,7 @@ public class StatsService {
     }
 
 
-    public int NumberOfMonthsWithBelowAverageSales(int[] sales) {
+    public int numberOfMonthsWithBelowAverageSales(int[] sales) {
         int i = 0;
 //        totalSalesAmount = 0;
 //        for (int delta : sales) {
@@ -84,7 +80,7 @@ public class StatsService {
     }
 
 
-    public int NumberOfMonthsWithAboveAverageSales(int[] sales) {
+    public int numberOfMonthsWithAboveAverageSales(int[] sales) {
         int i = 0;
         meanSale = calculateMeanSale(sales);
         for (int sale : sales) {

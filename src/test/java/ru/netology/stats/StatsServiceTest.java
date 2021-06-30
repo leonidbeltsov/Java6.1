@@ -32,40 +32,40 @@ class StatsServiceTest {
 
     @Test
         // Номер месяца, в котором был пик продаж
-    void FindNumberLastMonthWithTheHighestSales() {
+    void findNumberLastMonthWithTheHighestSales() {
         StatsService service = new StatsService();
         int expected = 8;
-        int NumberLastMonthWithTheHighestSales = service.FindNumberLastMonthWithTheHighestSales(sales);
-        assertEquals(expected, NumberLastMonthWithTheHighestSales);
+        int numberLastMonthWithTheHighestSales = service.findNumberLastMonthWithTheHighestSales(sales);
+        assertEquals(expected, numberLastMonthWithTheHighestSales);
     }
 
 
     @Test
         // Номер месяца, в котором был минимум продаж
-    void FindNumberLastMonthWithTheLowestSales() {
+    void findNumberLastMonthWithTheLowestSales() {
         StatsService service = new StatsService();
         int expected = 9;
-        int NumberLastMonthWithTheHighestSales = service.FindNumberLastMonthWithTheLowestSales(sales);
-        assertEquals(expected, NumberLastMonthWithTheHighestSales);
+        int numberLastMonthWithTheHighestSales = service.findNumberLastMonthWithTheLowestSales(sales);
+        assertEquals(expected, numberLastMonthWithTheHighestSales);
     }
 
 
     @Test
         // Кол-во месяцев, в которых продажи были ниже среднего
-    void NumberOfMonthsWithBelowAverageSales() {
+    void numberOfMonthsWithBelowAverageSales() {
         StatsService service = new StatsService();
         int expected = 5;
-        int NumberOfMonthsWithBelowAverageSales = service.NumberOfMonthsWithBelowAverageSales(sales);
-        assertEquals(expected, NumberOfMonthsWithBelowAverageSales);
+        int numberOfMonthsWithBelowAverageSales = service.numberOfMonthsWithBelowAverageSales(sales);
+        assertEquals(expected, numberOfMonthsWithBelowAverageSales);
     }
 
     @Test
         // Кол-во месяцев, в которых продажи были выше среднего
-    void NumberOfMonthsWithAboveAverageSales() {
+    void numberOfMonthsWithAboveAverageSales() {
         StatsService service = new StatsService();
         int expected = 5;
-        int NumberOfMonthsWithAboveAverageSales = service.NumberOfMonthsWithAboveAverageSales(sales);
-        assertEquals(expected, NumberOfMonthsWithAboveAverageSales);
+        int numberOfMonthsWithAboveAverageSales = service.numberOfMonthsWithAboveAverageSales(sales);
+        assertEquals(expected, numberOfMonthsWithAboveAverageSales);
     }
 
 }
