@@ -63,11 +63,6 @@ public class StatsService {
 
     public int numberOfMonthsWithBelowAverageSales(int[] sales) {
         int i = 0;
-//        totalSalesAmount = 0;
-//        for (int delta : sales) {
-//            totalSalesAmount += delta;
-//            meanSale = totalSalesAmount / sales.length;
-//        }
 // Ибо учат нас быть ленивыми и экономными программистами, мы не будет считать по новой значение средней продажи и
 // отдадим эту честь нашему сервису, написанному выше.
         meanSale = calculateMeanSale(sales);
