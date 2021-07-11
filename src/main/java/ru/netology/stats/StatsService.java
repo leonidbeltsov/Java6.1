@@ -15,8 +15,7 @@ public class StatsService {
 
 
     public int calculateMeanSale(int[] sales) {     // Среднемесячная продажа
-        int totalSalesAmount = calculateTotalSalesAmount(sales);
-        meanSale = totalSalesAmount / sales.length;
+        meanSale = calculateTotalSalesAmount(sales) / sales.length;
         return meanSale;
     }
 
@@ -32,7 +31,7 @@ public class StatsService {
         }
 
         for (int sale : sales) {
-            i = i + 1;
+            i++;
             if (sale == maxSale) {
                 iMax = i;
             }
@@ -52,7 +51,7 @@ public class StatsService {
         }
 
         for (int sale : sales) {
-            i = i + 1;
+            i++;
             if (sale == minSale) {
                 iMin = i;
             }
@@ -65,10 +64,9 @@ public class StatsService {
         int i = 0;
 // Ибо учат нас быть ленивыми и экономными программистами, мы не будет считать по новой значение средней продажи и
 // отдадим эту честь нашему сервису, написанному выше.
-        meanSale = calculateMeanSale(sales);
         for (int sale : sales) {
-            if (meanSale > sale) {
-                i = i + 1;
+            if (calculateMeanSale(sales) > sale) {
+                i++;
             }
         }
         return i;
@@ -80,7 +78,7 @@ public class StatsService {
         meanSale = calculateMeanSale(sales);
         for (int sale : sales) {
             if (meanSale < sale) {
-                i = i + 1;
+                i++;
             }
         }
         return i;
